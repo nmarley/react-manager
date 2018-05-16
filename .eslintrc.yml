@@ -1,0 +1,26 @@
+env:
+  node: true
+  browser: true
+  es6: true
+parser: babel-eslint
+extends: airbnb
+rules:
+  # allow .js files to contain JSX code
+  react/jsx-filename-extension: false
+
+  # do not enforce re-writing of `=> {` for simple returns
+  # (might reconsider this)
+  arrow-body-style: 0
+
+  # allow objects (such as styles) to be defined after the main logic in
+  # components
+  no-use-before-define: 0
+
+  # do not enforce dangling commas in multiline lists
+  comma-dangle: 0
+
+  # do not require consistent linebreaks in (e.g.) import destructuring
+  object-curly-newline: 0
+
+  # disable this temporarily (2018-05-12)
+  react/prefer-stateless-function: false
