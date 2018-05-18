@@ -27,7 +27,7 @@ class LoginForm extends Component {
             {this.props.error}
           </Text>
         </View>
-      )
+      );
     }
   }
 
@@ -80,7 +80,7 @@ const styles = {
     alignSelf: 'center',
     color: 'red',
   }
-}
+};
 
 const mapStateToProps = (state) => {
   const { email, password, error, loading } = state.auth;
