@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { ListView } from 'react-native';
+import { FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import { employeesFetch } from '../actions';
 import ListItem from './ListItem';
@@ -20,23 +20,18 @@ class EmployeeList extends Component {
   }
 
   createDataSource({ employees }) {
-    const ds = new ListView.DataSource({
-      rowHasChanged: (r1, r2) => r1 !== r2
-    });
-
-    this.dataSource = ds.cloneWithRows(employees);
+    this.data = employees;
   }
 
-  renderRow(employee) {
-    return <ListItem employee={employee} />;
+  renderItem({ item, index }) {
+    return <ListItem employee={item} />;
   }
 
   render() {
     return (
-      <ListView
-        enableEmptySections
-        dataSource={this.dataSource}
-        renderRow={this.renderRow}
+      <FlatList
+        data={this.data}
+        renderItem={this.renderItem}
       />
     );
   }
