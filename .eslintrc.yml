@@ -27,3 +27,6 @@ rules:
 
   # disable prop validation for now
   react/prop-types: 0
+
+  # disable for now
+  class-methods-use-this: 0
