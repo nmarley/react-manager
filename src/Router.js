@@ -38,4 +38,3 @@ const RouterComponent = () => {
 };
 
 export default RouterComponent;
-// <Scene key="employeeDetail" component={EmployeeDetail} title="EmployeeDetail" />
